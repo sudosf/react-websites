@@ -1,16 +1,20 @@
-import reactLogo from "../assets/react.svg";
+import reactLogo from "../assets/react.svg"; // image reference
+import airbnb from "../assets/reactjs.png"; // image reference
 
-function Navbar() {
+
+/* NavBar Component*/
+export default function Navbar() {
   // TODO
   // - Props
   
   return (
-    <nav>
-      <img src={reactLogo} alt="react-logo" />
-      <h3>ReactCourse</h3>
-      <h4>Project 2</h4>
-    </nav>
+	<nav className="navbar bg-body-tertiary">
+		<div className="container-fluid shadow pb-2">
+			<a className="navbar-brand" href="#">
+				<img className="img-fluid px-2" src={reactLogo} alt="" />
+				airbnb
+			</a>
+		</div>
+	</nav>
   );
-}
-
-export default Navbar;
+};

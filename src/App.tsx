@@ -27,24 +27,35 @@ export default function App() {
 			name="Sudo Ensudo" 
 			tel="(+27) 77 057 5427" 
 			email="ever.ensudo@mouse.cheese" 
+			valid={true}
 		/>
 		<Card 
 			img={r2Img} 
 			name="William Doew" 
 			tel="(+27) 72 983 3491" 
 			email="cheesy.docks@mouse.cheese" 
+			valid={true}
 		/>
 		<Card 
 			img={r3Img} 
 			name="Aleka Niguwa" 
 			tel="(+27) 82 233 323" 
-			email="elka.docks@mouse.cheese" 
+			email="elka.docks@mouse.cheese"
+			valid={true}
 		/>
 		<Card 
 			img={r4Img} 
 			name="Ukhana Yinam" 
 			tel="(+27) 62 320 8472" 
-			email="yun.docks@mouse.cheese" 
+			email="yun.docks@mouse.cheese"
+			valid={true}
+		/>
+		<Card 
+			img={r2Img}
+			name="null"
+			tel="(+27) 72 983 3491" 
+			email="cheesy.docks@mouse.cheese"
+			valid={false}
 		/>
 
     </div>

@@ -9,13 +9,18 @@ interface Data {
 
 export default function Card(props: Data) {
    
-    const nums = [1, 2, 4, 3, 5];
+    const nums: number[] = [1, 2, 4, 3, 5];
+    const names: string[] = ["a", "bob", "eli"];
 
-    const funk = nums.map(function(item) {
+    const testOne = nums.map(function(item: number) {
         return item * item;
     });
 
-    console.log(funk);
+    const testTwo = names.map(function(name: string) {
+        return name[0].toUpperCase() + name.slice(1);
+    });
+
+    // console.log(props);
 
     return (
         <section className="card mx-auto my-2 shadow" style={{'width': '18rem'}}>

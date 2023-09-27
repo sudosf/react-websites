@@ -1,12 +1,8 @@
 import reactLogo from "../assets/react.svg"; // image reference
-import airbnb from "../assets/reactjs.png"; // image reference
-
 
 /* NavBar Component*/
 export default function Navbar() {
-  // TODO
-  // - Props
-  
+
   return (
 	<nav className="navbar bg-body-tertiary">
 		<div className="container-fluid shadow pb-2">

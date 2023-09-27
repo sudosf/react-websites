@@ -1,0 +1,25 @@
+	// testing map() for react components
+	const person = personData.map(data => {
+		return (
+			<Card 
+				img={data.img} 
+				name={data.name}  
+				tel={data.tel}  
+				email={data.email} 
+				valid={data.valid} 
+				// or
+				// {...data}
+			/>
+		);
+	});
+
+	return (
+	<>
+		<Navbar />
+
+		<div className="container-fluid d-flex flex-wrap">
+			{person}
+			<Hero />
+		</div>
+	</>
+	);

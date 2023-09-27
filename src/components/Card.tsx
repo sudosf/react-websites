@@ -1,4 +1,3 @@
-import React from "react";
 
 interface Data {
     img: string;
@@ -10,6 +9,14 @@ interface Data {
 
 export default function Card(props: Data) {
    
+    const nums = [1, 2, 4, 3, 5];
+
+    const funk = nums.map(function(item) {
+        return item * item;
+    });
+
+    console.log(funk);
+
     return (
         <section className="card mx-auto my-2 shadow" style={{'width': '18rem'}}>
         <img src={props.img} className="img-fluid w-100 h-100 shadow rounded-top" alt="grid-image" />

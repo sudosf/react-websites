@@ -5,13 +5,13 @@ export default function Navbar() {
 
   return (
 
-	<nav className="navbar bg-warning shadow">
-		<div className="container-fluid d-flex">
-			<a className="navbar-brand" href="#">
+	<nav className="navbar bg-dark shadow">
+		<div className="container-fluid d-flex text-white">
+			<a className="navbar-brand text-white" href="#">
 				<img src={reactLogo} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
 				MemeGenerator
 			</a>
-			<p className="">Hi There</p>
+			<p className="">React Learning</p>
 		</div>
 	</nav>
   );

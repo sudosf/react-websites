@@ -4,11 +4,18 @@ import r1Img from "../assets/r1.jpg";
 
 export default function Meme(){
 
-    const [result, setResult] = React.useState("A");
+    const [meme, setMeme] = React.useState({
+        topText: "",
+        bottomText: ""
+    });
 
-    function getMeme(): void {
-       setResult(prevResult => prevResult + "B");
-    }
+    function getMeme() {
+        setMeme(prevMeme => ({
+            topText: "A",
+            bottomText: "B"
+        }));
+    };
+
 
     return (
         <main className="container my-5">
@@ -28,7 +35,10 @@ export default function Meme(){
             </div>
 
             <div className="text-center mt-4 d-grid gap-2">
+                <p>{meme.topText}</p>
                 <img src={r1Img} className="img-fluid w-100 h-100 shadow rounded-top" alt="grid-image" />
+                <p>{meme.bottomText}</p>
+
             </div>
         </main>
     );

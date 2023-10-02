@@ -11,7 +11,7 @@ export default function Meme(){
 
     function getMeme() {
         setMeme(prevMeme => ({
-            topText: "A",
+            topText: prevMeme.topText + "A",
             bottomText: "B"
         }));
     };

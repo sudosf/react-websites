@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function Form() {
-
+export default function() {
     const [formData, setFormData] = React.useState(
         {
             firstName: "", 

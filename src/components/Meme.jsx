@@ -15,7 +15,7 @@ export default function Meme(){
     React.useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
             .then(res => res.json())
-            .then(data => setAllMemes(data))
+            .then(result => setAllMemes(result.data.memes))
     }, []);
 
     function handleChange(event) {
@@ -27,6 +27,16 @@ export default function Meme(){
             }
         });
     };
+
+    function getMemeImage() {
+        const randomNum = Math.floor(Math.random() * allMemes.length);
+        const url = allMemes[randomNum].url;
+        
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            image: url
+        }));
+    }
 
     return (
         <main className="container my-5">
@@ -56,7 +66,7 @@ export default function Meme(){
             </div>
 
             <div className="text-center mt-4 d-grid gap-2">
-                <button className="btn btn-success btn-lg btn-block" name='submit' onClick={handleChange}>
+                <button className="btn btn-success btn-lg btn-block" name='submit' onClick={getMemeImage}>
                     Get a new Meme image
                 </button>
             </div>
@@ -68,7 +78,7 @@ export default function Meme(){
 
             </div>
 
-            <pre>{JSON.stringify(allMemes['data']['memes'], null, 1)}</pre>
+            <pre>{JSON.stringify(allMemes, null, 0)}</pre>
         </main>
     );
 }

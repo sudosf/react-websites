@@ -7,7 +7,16 @@ export default function Meme(){
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
+        image: "http://i.imgflip.com/1bij.jpg"
     });
+
+    const [allMemes, setAllMemes] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data))
+    }, []);
 
     function handleChange(event) {
         setMeme(prevMeme => {
@@ -18,7 +27,6 @@ export default function Meme(){
             }
         });
     };
-
 
     return (
         <main className="container my-5">
@@ -55,10 +63,12 @@ export default function Meme(){
 
             <div className="text-center mt-4 d-grid gap-2">
                 <p>{meme.topText}</p>
-                <img src={r1Img} className="img w-100 h-100 shadow rounded-top" alt="grid-image" />
+                <img src={meme.image} className="img w-100 h-100 shadow rounded-top" alt="grid-image" />
                 <p>{meme.bottomText}</p>
 
             </div>
+
+            <pre>{JSON.stringify(allMemes['data']['memes'], null, 1)}</pre>
         </main>
     );
 }

@@ -1,7 +1,5 @@
 import React from "react";
 
-import r1Img from "../assets/r1.jpg";
-
 export default function Meme(){
 
     const [meme, setMeme] = React.useState({
@@ -39,7 +37,7 @@ export default function Meme(){
     }
 
     return (
-        <main className="container my-5">
+        <main className="container my-5 text-white">
             <div className="text-center mb-3">
                 <p>Enter Meme Text</p>
             </div>

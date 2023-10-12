@@ -8,10 +8,10 @@ export default function App() {
 
 	return (
 	<>
-	
-		< Navbar />
-		< Meme />
-
+		<div className="container-fluid bg-secondary">
+			< Navbar />
+			< Meme />
+		</div>
 	</>
 	);
 }

@@ -7,7 +7,7 @@ import {} from 'react-dom';
 
 const person = {
     age: 10,
-    name: welcome
+    name: "welcome"
 };
 
 

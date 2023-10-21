@@ -9,19 +9,9 @@ body {
 nav {
   display: flex;
   align-items: center;
-  background-color: #21222A;
   height: 90px;
   padding: 30px 25px;
 }
-
-/*
-nav > h3 {
-  margin: 0;
-  margin-right: auto;
-  color: aqua;
-}
-*/
-
 
 
 nav > img {
